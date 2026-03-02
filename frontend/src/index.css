@@ -7,4 +7,5 @@
 html,
 body {
   margin: none;
+  flex: 1;
 }

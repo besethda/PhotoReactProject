@@ -7,3 +7,5 @@ const PhotoAlbum = () => {
     </div>
   )
 }
+
+export default AlbumImage

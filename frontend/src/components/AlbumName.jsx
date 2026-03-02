@@ -5,3 +5,5 @@ const AlbumName = ({name}) => {
     </div>
   )
 }
+
+export default AlbumName
