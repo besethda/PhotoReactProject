@@ -1,7 +1,13 @@
-const Settings = () => {
+import SettingsContainer from "./SettingsContainer"
+
+const Settings = ({settingsButton, settingsFunction}) => {
+const handleSettings = () => {
+  settingsFunction(settingsButton && false)
+}
+
   return (
-    <div className="w-full h-screen fixed z-100 top-0 flex flex-col backdrop-blur-lg bg-gray-950/40">
-      
+    <div onClick={handleSettings} className="w-full h-screen fixed top-0 flex flex-col items-center justify-center backdrop-blur-sm">
+      <SettingsContainer />
     </div>
   )
 }
