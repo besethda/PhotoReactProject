@@ -1,6 +1,6 @@
 const AlbumImage = ({imageLink}) => {
   return (
-    <img className="w-full h-full object-fill" src={`${getImageURL(imageLink)}`}/>
+    <img className="w-full h-full object-fill"/>
   )
 }
 

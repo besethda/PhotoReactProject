@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header settingsButton = {settings} settingsFunction = {showSettings}/>
-      <Container />
+      <Container category = {"gallery"}/>
       {settings && <Settings settingsButton = {settings} settingsFunction = {showSettings}/>}
     </>
   )
