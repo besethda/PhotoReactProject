@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
-import { makeRequest } from "../api";
+import { useState, useEffect } from "react"
+import { makeRequest } from "../api"
 import PhotoAlbum from "./PhotoAlbum"
 
 const CategoryContainer = ({categoryName}) => {
-  
+  const [albums, addAlbums] = useState([])
   useEffect(()=> {
     makeRequest(`api/groups?category=${categoryName}`)
     .then(data=> {
-      console.log(data)
+      addAlbums(data)
     })
     .catch(err=> {
       console.error("Error:", err)
@@ -15,10 +15,11 @@ const CategoryContainer = ({categoryName}) => {
   }, [])
 
   return (
-    <div className="flex flex-wrap w-full h-fit">
-      <PhotoAlbum />
+    <div className="flex flex-wrap justify-center w-full h-fit">
+      <div className="w-full text-3xl px-20 py-3">{categoryName.toUpperCase()}</div>
+      {albums.map((album, i)=> <PhotoAlbum key = {i} albumData = {album}/>)}
     </div>
   );
 };
 
-export default CategoryContainer;
+export default CategoryContainer

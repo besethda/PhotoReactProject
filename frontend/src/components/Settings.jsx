@@ -6,7 +6,7 @@ const handleSettings = () => {
 }
 
   return (
-    <div onClick={handleSettings} className="w-full h-screen fixed top-0 flex flex-col items-center justify-center backdrop-blur-sm">
+    <div onClick={handleSettings} className="z-7 w-full h-screen fixed top-0 flex flex-col p-10 items-center justify-center bg-gray-950/12 backdrop-blur-sm">
       <SettingsContainer />
     </div>
   )
