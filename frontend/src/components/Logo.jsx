@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { makeRequest } from "../api"
+import { Link } from "react-router-dom"
 
 const Logo = () => {
 
@@ -13,9 +14,9 @@ const Logo = () => {
   }, [])
   
   return (
-    <a>
+    <Link to={'/'}> 
       <img className="h-12 m-1 aspect-square" src={`${logoURL}`}/>
-    </a>
+    </Link>
   )
 }
 
