@@ -16,7 +16,7 @@ const CategoryContainer = ({categoryName}) => {
 
   return (
     <div className="flex flex-wrap justify-center w-full h-fit">
-      <div className="w-full text-3xl px-20 py-3">{categoryName.toUpperCase()}</div>
+      <div className="w-full text-3xl px-28 py-3">{categoryName.toUpperCase()}</div>
       {albums.map((album, i)=> <PhotoAlbum key = {i} albumData = {album}/>)}
     </div>
   );

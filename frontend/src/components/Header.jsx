@@ -1,11 +1,12 @@
 import Logo from "./Logo"
 import Icons from "./Icons"
 
-const Header = ({settingsButton, settingsFunction}) => {
+const Header = ({settingsButton, settingsFunction, sidebar, toggle}) => {
+  
   return (
-    <div className="w-full h-20 backdrop-blur-3xl bgwhite/50 flex justify-between px-3 py-1">
+    <div className="w-full h-17 backdrop-blur-3xl bgwhite/50 flex justify-between items-center mb-5 px-3 shadow-[6px_0_9px_0px_black]">
       <Logo />
-      <Icons settings = {settingsButton} settingsToggle = {settingsFunction}/>
+      <Icons sideBar = {sidebar} sidebarToggle = {toggle}/>
     </div>
   );
 };
