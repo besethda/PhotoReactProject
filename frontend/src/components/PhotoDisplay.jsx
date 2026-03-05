@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+
 const PhotoDisplay = ({switchPhoto, photoArray, currentId, idPhoto, updatePhoto}) => {
 
   let photoIndex = photoArray.findIndex(e=> e.id === currentId)
